@@ -1,59 +1,57 @@
+/* General body styling */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*  height: 100vh; Sørger for, at siden fylder hele vinduet */
     background-color: #1a1a1a;
     color: white;
 }
 
-
+/* Header styling */
 .header-container {
     display: flex;
     align-items: center;
     color: white;
-
-
 }
 
+/* Button container styling */
 .button-container {
     display: flex;
-    flex-direction: column; /* Læg knap-grupperne vertikalt */
-    align-items: center; /* Center knap-grupperne */
-    background-color: #383838; /* Lys baggrundsfarve for knap-containeren */
-    padding: 20px; /* Indvendig padding */
-    border-radius: 40px; /* Runde hjørner for containeren */
+    flex-direction: column;
+    align-items: center;
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 40px;
     width: 600px;
-
 }
 
-/* Styling for knap-grupper */
+/* Button group styling */
 .button-group {
     display: flex;
-    justify-content: center; /* Center knapperne inden for gruppen */
-    gap: 20px; /* Mellemrum mellem knapperne */
-    margin-bottom: 15px; /* Mellemrum mellem knap-grupperne */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
     border-radius: 40px;
 }
 
-/* Knap styling */
+/* Common button styling */
 button {
-    background-color: black; /* Sort baggrund */
-    color: white; /* Hvid tekst */
-    border: none; /* Ingen kant */
-    border-radius: 50px; /* Runde hjørner */
-    padding: 10px 20px; /* Polstring */
-    cursor: pointer; /* Pointer ved hover */
-    transition: background-color 0.3s; /* Glidende overgang for hover-effekt */
-    /*border-radius: 50px; */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+/* Button hover effect */
 button:hover {
-    background-color: #444; /* Mørkere sort ved hover */
+    background-color: #444;
 }
 
-/* Modal styling */
+/* Modal header and body styling */
 .modal-header {
     background-color: #343a40;
     color: white;
@@ -62,20 +60,27 @@ button:hover {
 .modal-body {
     padding: 20px;
 }
+
+/* Special button styling inside modals */
 .button.modal-button {
     background-color: white;
     color: black;
 }
+
+/* Primary button styling for modals */
 .btn-primary {
-    background-color: #ffcc00;
+    background-color: #ffffff;
     color: black;
 }
+
+/* Form styling */
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+/* Label styling */
 .form-label {
     color: black;
 }
-

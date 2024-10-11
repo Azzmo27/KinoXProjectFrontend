@@ -12,13 +12,13 @@
 </head>
 <body>
 <div class="header">
-    <a href="landingPage.html" class="logo">KinoXP</a>
+    <a href="index.html" class="logo">KinoXP</a>
 </div>
 <div class="container">
-    <div><h4><label for="searched-movie">Hvilken film vil du søge efter?</label></h4></div>
+    <div><h4><label for="searched-movie">Serch for movie ?</label></h4></div>
     <input type="text" id="searched-movie" required>
     <button id="search-button" type="submit">Search</button>
-    <button type="button" class="btn btn-primary mb-3" onclick="window.location.href='admin.html'">Tilbage til dashboard</button>
+    <button type="button" class="btn btn-primary mb-3" onclick="window.location.href='employee.html'">Tilbage til dashboard</button>
 </div>
 <div id="edit-movie-modal" class="modal">
     <div class="modal-header">
@@ -30,25 +30,25 @@
             <label for="movie-title">Titel:</label>
             <input type="text" id="movie-title" name="title" required>
 
-            <label for="movie-release-year">Udgivelsesår:</label>
+            <label for="movie-release-year">Release year:</label>
             <input type="number" id="movie-release-year" name="releaseYear" required>
 
             <label for="movie-genre">Genre:</label>
             <input type="text" id="movie-genre" name="genre" required>
 
-            <label for="movie-genre">Runtime:</label>
+            <label for="movie-genre">Run time:</label>
             <label for="movie-runtime"></label><input type="text" id="movie-runtime" name="runtime" required>
 
-            <label for="movie-poster">Plakat:</label>
+            <label for="movie-poster">Poster:</label>
             <input type="text" id="movie-poster" name="moviePoster" required>
 
-            <label for="movie-Imdb-rating">ImdbRating:</label>
+            <label for="movie-Imdb-rating">Imdb Rating:</label>
             <input type="text" id="movie-Imdb-rating" name="imdb-rating" required>
 
-            <label for="movie-actors">Skuespillere:</label>
+            <label for="movie-actors">Actor:</label>
             <input type="text" id="movie-actors" name="actors" required>
 
-            <label for="movie-directors">Instruktører:</label>
+            <label for="movie-directors">Director:</label>
             <input type="text" id="movie-directors" name="directors" required>
 
             <label for="movie-release-date">Udgivelsesdato:</label>
@@ -64,13 +64,16 @@
 </div>
 <div class="footer">
     <div class="footer-content">
-        <div class="footer-left"> <p>Telephone Number: +45 1234 5678</p>
-            <p>Hjemmeside: <a href="https://www.kinoxp.dk">www.kinoxp.dk</a></p>
+        <div class="footer-left">
+            <p>Phone number: +45 0987654</p>
+            <p>Website: <a href="https://www.kinoxp.dk">www.kinoxp.dk</a></p>
         </div>
-        <div class="footer-right">   <p>Address: KinoXP, Gade 123, 1000 København</p>
-            <p>Email: <a href="mailto:kontakt@kinoxp.dk">kontakt@kinoxp.dk</a></p>
-            <p><a href="login.html" class="admin-login-link">Log ind As admin</a></p>
-        </div></div>
+        <div class="footer-right">
+            <p>Address: KinoXP, Guldberggade 29N</p>
+            <p>Email: <a href="mailto:NAAI@kinoxp.dk">NAAI@kinoxp.dk</a></p>
+            <p><a href="login.html" class="employee-login-link">Log in as an employee</a></p>
+        </div>
+    </div>
 </div>
 
 <script src="../js/editMovie.js"></script>

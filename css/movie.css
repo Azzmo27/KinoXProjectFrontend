@@ -39,7 +39,7 @@ img {
 
 .details h2 {
     font-size: 2.5em;
-    color: #ffcc00;
+    color: #ffffff;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -52,7 +52,7 @@ img {
 }
 
 .highlight {
-    color: #ffcc00;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -109,7 +109,7 @@ img {
 
 /* The Close Button */
 .close {
-    color: #ffcc00;
+    color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -148,14 +148,14 @@ select option {
 
 /* Hover effect for the select dropdown */
 select:hover {
-    border-color: #ffcc00; /* Highlight border on hover */
+    border-color: #ffffff; /* Highlight border on hover */
 }
 
 /* Focus style when the dropdown is clicked */
 select:focus {
     outline: none; /* Remove default focus outline */
-    border-color: #ffcc00; /* Border color on focus */
-    box-shadow: 0 0 5px #ffcc00; /* Glowing effect on focus */
+    border-color: #ffffff; /* Border color on focus */
+    box-shadow: 0 0 5px #ffffff; /* Glowing effect on focus */
 }
 
 
@@ -172,15 +172,17 @@ input[type="datetime-local"] {
 }
 
 /* Hover effect for the date selector */
+
+
 input[type="datetime-local"]:hover {
-    border-color: #ffcc00; /* Highlight border on hover */
+    border-color: #ffffff; /* Highlight border on hover */
 }
 
 /* Focus style when the date selector is clicked */
 input[type="datetime-local"]:focus {
     outline: none; /* Remove default focus outline */
-    border-color: #ffcc00; /* Border color on focus */
-    box-shadow: 0 0 5px #ffcc00; /* Glowing effect on focus */
+    border-color: #ffffff; /* Border color on focus */
+    box-shadow: 0 0 5px #ffffff; /* Glowing effect on focus */
 }
 
 /* Change the placeholder color for the date selector */
@@ -197,7 +199,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 button {
     width: 100%; /* Full width for the button */
     padding: 12px; /* Padding for better click area */
-    background-color: #ffcc00; /* Button background color */
+    background-color: #ffffff; /* Button background color */
     color: black; /* Button text color */
     font-size: 1.2em; /* Font size for readability */
     border: none; /* Remove default border */
@@ -209,19 +211,19 @@ button {
 
 /* Hover effect for the button */
 button:hover {
-    background-color: #e6b800; /* Slightly darker yellow on hover */
+    background-color: #ffffff; /* Slightly darker yellow on hover */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* Focus effect for the button */
 button:focus {
     outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 10px #ffcc00; /* Glowing effect when focused */
+    box-shadow: 0 0 10px #ffffff; /* Glowing effect when focused */
 }
 
 /* Active effect for the button (when clicked) */
 button:active {
-    background-color: #cc9900; /* Darker yellow when button is pressed */
+    background-color: #ffffff; /* Darker yellow when button is pressed */
     box-shadow: none; /* Remove shadow when pressed */
 }
 
@@ -236,7 +238,7 @@ button.btn-primary {
 button {
     padding: 8px 16px; /* Smaller padding */
     font-size: 1em; /* Smaller font size */
-    background-color: #ffcc00; /* Button background color */
+    background-color: #ffffff; /* Button background color */
     color: black; /* Button text color */
     border: none; /* Remove default border */
     border-radius: 4px; /* Rounded corners */
@@ -245,13 +247,13 @@ button {
 }
 
 button:hover {
-    background-color: #e6b800; /* Slightly darker yellow on hover */
+    background-color: #ffffff; /* Slightly darker yellow on hover */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 button:focus {
     outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 10px #ffcc00; /* Glow effect on focus */
+    box-shadow: 0 0 10px #ffffff; /* Glow effect on focus */
 }
 
 

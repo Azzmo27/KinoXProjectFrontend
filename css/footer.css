@@ -11,10 +11,10 @@ html, body {
 }
 
 .footer {
-    background-color: #1a1a1a;
+    background-color: #3453e5;
     padding: 20px;
     width: 100%;
-    color: #ffcc00;
+    color: #ffffff;
     text-align: center;
     position: relative;
     bottom: 0;
@@ -40,7 +40,7 @@ html, body {
 }
 
 .footer-content a {
-    color: #ffcc00;
+    color: #ffffff;
     text-decoration: none;
 }
 

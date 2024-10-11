@@ -11,7 +11,7 @@ body {
 }
 h1 {
     text-align: center;
-    color: #ffcc00; /* Gylden farve som biograf stemning */
+    color: #ffffff; /* Gylden farve som biograf stemning */
 }
 .movie-grid {
     display: grid;
@@ -36,7 +36,7 @@ h1 {
 .title {
     margin-top: 10px;
     font-size: 1.1em;
-    color: #ffcc00;
+    color: #ffffff;
 }
 
 .modal-body {

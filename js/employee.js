@@ -1,31 +1,30 @@
-// Check if admin is logged in
-async function checkAdminSession() {
+async function checkEmployeeSession() {
     try {
-        const response = await fetch("http://localhost:8080/admin/check-admin-presence", {
+        const response = await fetch("http://localhost:8080/employee/check-employee-session", {
             method: "GET",
-            credentials: "include" // Include credentials for session management
+            credentials: "include"
         });
 
         if (!response.ok) {
-            // If the response is not OK, redirect to login
+
             window.location.href = "../html/login.html";
         }
     } catch (error) {
-        console.error("Error checking admin session:", error);
-        window.location.href = "../html/login.html"; // Redirect on error
+        console.error("Error checking employee session:", error);
+        window.location.href = "../html/login.html";
     }
 }
 
-// Call the session check on page load
+
 document.addEventListener("DOMContentLoaded", function() {
-    checkAdminSession();
+    checkEmployeeSession();
 });
 
-document.getElementById("create-admin-btn").addEventListener("click", function() {
-    document.getElementById("create-admin-modal").style.display = "block";
+document.getElementById("create-employee-btn").addEventListener("click", function() {
+    document.getElementById("create-employee-modal").style.display = "block";
 });
 
-document.getElementById("create-admin-form").addEventListener("submit", async function(event) {
+document.getElementById("create-employee-form").addEventListener("submit", async function(event) {
     event.preventDefault();
 
     const username = document.getElementById("new-username").value;
@@ -33,7 +32,7 @@ document.getElementById("create-admin-form").addEventListener("submit", async fu
     const fullName = document.getElementById("new-fullname").value;
 
     try {
-        const response = await fetch("http://localhost:8080/admin/register", {
+        const response = await fetch("http://localhost:8080/employee/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -46,10 +45,10 @@ document.getElementById("create-admin-form").addEventListener("submit", async fu
         });
 
         if (response.ok) {
-            alert("Admin registered successfully");
-            // Optionally, reset the form or close the modal
-            document.getElementById("create-admin-form").reset();
-            document.getElementById("create-admin-modal").style.display = "none";
+            alert("Employee is registered successfully");
+
+            document.getElementById("create-employee-form").reset();
+            document.getElementById("create-employee-modal").style.display = "none";
         } else {
             const errorText = await response.text();
             alert("Error: " + errorText);
@@ -62,51 +61,82 @@ document.getElementById("create-admin-form").addEventListener("submit", async fu
 document.getElementById("edit-movie-btn").addEventListener("click", function() {
     window.location.href = "editMovie.html";
 });
-document.getElementById("create-theatre").addEventListener("click", function (){
-    document.getElementById("create-theatre-modal").style.display="block";
+document.getElementById("create-cinema-hall").addEventListener("click", function (){
+    document.getElementById("create-cinema-hall-modal").style.display="block";
 });
 
-document.getElementById("create-theatre-form").addEventListener("submit", async function(event) {
+
+document.getElementById("create-cinema-hall-form").addEventListener("submit", async function(event) {
     event.preventDefault();
     const seatRows = document.getElementById("rows").value;
     const seatsPerRow = document.getElementById("seats").value;
 
     try {
-        const response = await fetch("http://localhost:8080/theatre/create", {
+        const response = await fetch("http://localhost:8080/cinema-hall/create", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                seatRows: seatRows,  // Use seatRows instead of rows
-                seatsPerRow: seatsPerRow  // Use seatsPerRow instead of seats
+                seatRows: seatRows,
+                seatsPerRow: seatsPerRow
             })
         });
 
         if (response.ok) {
-            alert("Theatre created successfully");
-            document.getElementById("create-theatre-form").reset();
-            document.getElementById("create-theatre-modal").style.display = "none";
+            alert("Cinema hall created successfully");
+            document.getElementById("create-cinema-hall-form").reset();
+            document.getElementById("create-cinema-hall-modal").style.display = "none";
         } else {
             const errorText = await response.text();
             alert("Error: " + errorText);
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("An error occurred while creating the theatre.");
+        alert("An error occurred while creating the cinema hall.");
     }
 });
 
+document.getElementById('btn-save-showing').addEventListener('click', async function() {
+    const movieId = document.getElementById('input-movie').value;
+    const cinemaHallId = document.getElementById('input-cinema-hall').value;
+    const dateTime = document.getElementById('input-date-time').value;
 
+    // Assuming you have a way to get the current employee's ID, e.g., from the session
+    const employeeId = 1; // Replace with actual employee ID retrieval logic
 
+    const showingData = {
+        movie: { movieId: movieId },
+        cinemaHall: { cinemaHallId: cinemaHallId },
+        dateTime: dateTime,
+        employee: { employeeId: employeeId }
+    };
 
+    try {
+        const response = await fetch('http://localhost:8080/showing/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(showingData)
+        });
 
-
-
-
-
-
-
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Showing created:', data);
+            alert('Showing created successfully!');
+            // Reset the form and close the modal
+            document.getElementById('create-showing-form').reset();
+            $('#create-showing-modal').modal('hide');
+        } else {
+            const errorText = await response.text();
+            alert('Error: ' + errorText);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while creating the showing.');
+    }
+});
 
 
 
@@ -124,7 +154,7 @@ document.getElementById('btn-save-movie').addEventListener('click', function () 
         imdbID: document.getElementById('input-imdbID').value
     };
 
-    // Log the movie object to debug
+
     console.log("Submitting movie:", movie);
 
     fetch('http://localhost:8080/movies', {
@@ -160,10 +190,11 @@ document.getElementById('btn-save-movie').addEventListener('click', function () 
 
             moviesGrid.appendChild(movieItem);
 
-            // Reset the form
+
             document.getElementById('movie-form').reset();
             const modal = bootstrap.Modal.getInstance(document.getElementById('movie-modal'));
             modal.hide();
         })
         .catch(error => console.error('Error:', error));
 });
+
