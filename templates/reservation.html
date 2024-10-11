@@ -54,16 +54,16 @@
             });
 
             // Create a formatted string for each row
-            let formattedSeats = 'Dine sæder:<br>';
+            let formattedSeats = 'Your Seats:<br>';
             for (let row in seatsPerRow) {
                 // Sort the seats for each row
                 seatsPerRow[row].sort((a, b) => a - b);
-                formattedSeats += `Række ${row}: Sæde ${seatsPerRow[row].join(', ')}<br>`;
+                formattedSeats += `Row ${row}: Seat ${seatsPerRow[row].join(', ')}<br>`;
             }
 
             document.getElementById('reserved-seats').innerHTML = formattedSeats;
         } else {
-            document.getElementById('reserved-seats').textContent = 'Ingen sæder var reserveret';
+            document.getElementById('reserved-seats').textContent = 'No seats was reserved';
         }
 
         // Optionally, clear the booking details from local storage
