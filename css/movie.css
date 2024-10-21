@@ -99,7 +99,7 @@ img {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px; /* Max width for the modal */
+    max-width: 500px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -107,7 +107,7 @@ img {
     border-radius: 8px;
 }
 
-/* The Close Button */
+
 .close {
     color: #ffffff;
     float: right;
@@ -124,20 +124,19 @@ img {
 
 @media (max-width: 768px) {
     .modal-content {
-        width: 90%; /* Adjust modal width for smaller screens */
+        width: 90%;
     }
 }
 
-/* Style for dropdown menus */
 select {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding for better clickability */
-    border: 1px solid #888; /* Border to match modal style */
-    border-radius: 5px; /* Rounded corners */
-    background-color: black; /* Background color */
-    color: white; /* Text color */
-    font-size: 1.2em; /* Increase font size */
-    margin-top: 10px; /* Spacing between elements */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 /* Style for dropdown options */

@@ -7,7 +7,7 @@ html, body {
 }
 
 .container {
-    flex: 1; /* Fylder den resterende plads mellem header og footer */
+    flex: 1;
 }
 
 .footer {

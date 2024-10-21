@@ -1,4 +1,4 @@
-/* General body styling */
+
 body {
     display: flex;
     flex-direction: column;
@@ -8,14 +8,14 @@ body {
     color: white;
 }
 
-/* Header styling */
+
 .header-container {
     display: flex;
     align-items: center;
     color: white;
 }
 
-/* Button container styling */
+
 .button-container {
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ body {
     width: 600px;
 }
 
-/* Button group styling */
+
 .button-group {
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ body {
     border-radius: 40px;
 }
 
-/* Common button styling */
+
 button {
     background-color: black;
     color: white;
@@ -46,12 +46,12 @@ button {
     transition: background-color 0.3s;
 }
 
-/* Button hover effect */
+
 button:hover {
     background-color: #444;
 }
 
-/* Modal header and body styling */
+
 .modal-header {
     background-color: #343a40;
     color: white;
@@ -61,26 +61,26 @@ button:hover {
     padding: 20px;
 }
 
-/* Special button styling inside modals */
+
 .button.modal-button {
     background-color: white;
     color: black;
 }
 
-/* Primary button styling for modals */
+
 .btn-primary {
     background-color: #ffffff;
     color: black;
 }
 
-/* Form styling */
+
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Label styling */
+
 .form-label {
     color: black;
 }

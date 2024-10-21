@@ -2,8 +2,8 @@
     background-color: #3453e5;
     width: 100%;
     padding: 30px 30px;
-    position: sticky; /* Gør headeren fastlåst øverst, når du scroller */
-    top: 0; /* Sørger for, at headeren er placeret øverst på siden */
+    position: sticky;
+    top: 0;
     z-index: 1000;
 
 }

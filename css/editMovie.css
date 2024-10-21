@@ -31,7 +31,7 @@ body {
     text-align: left;
 }
 
-/* Modal styling */
+
 .modal {
     display: none;
     position: fixed;
@@ -106,51 +106,51 @@ body {
     display: block;
 }
 
-/* Styling for søgefeltet og søgeknappen */
+
 
 #searched-movie {
-    width: 300px; /* Fast bredde */
-    padding: 10px; /* Indvendig padding for at gøre tekstfeltet større */
-    border: 2px solid #ccc; /* Lys grå kant */
-    border-radius: 20px; /* Afrundede hjørner */
-    outline: none; /* Fjern standard blå outline */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Glidende overgang for hover-effekt */
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 #searched-movie:focus {
-    border-color: #ffffff; /* Skift kantfarve ved fokus */
-    box-shadow: 0 0 8px rgb(255, 204, 0); /* Tilføj en blød skygge ved fokus */
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgb(255, 204, 0);
 }
 
 #search-button {
     background-color: #ffcc00;
     color: black;
-    border: none; /* Fjern kant */
-    border-radius: 20px; /* Afrundede hjørner */
-    padding: 10px 20px; /* Polstring for større knap */
-    cursor: pointer; /* Pointer ved hover */
-    margin-left: 10px; /* Lidt afstand mellem søgefeltet og knappen */
-    transition: background-color 0.3s; /* Glidende overgang for hover-effekt */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
 }
 
 #search-button:hover {
-    background-color: #ffffff; /* Mørkere blå ved hover */
+    background-color: #ffffff;
 }
 
-/* Styling for tilbage til dashboard knappen */
+
 .btn-primary {
-    background-color: #343a40; /* Mørk baggrund */
-    color: white; /* Hvid tekst */
+    background-color: #343a40;
+    color: white;
     border: none;
-    border-radius: 20px; /* Afrundede hjørner */
+    border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-top: 20px; /* Lidt afstand til toppen */
+    margin-top: 20px;
     transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #1d2124; /* Mørkere baggrund ved hover */
+    background-color: #1d2124;
 }
 
 
